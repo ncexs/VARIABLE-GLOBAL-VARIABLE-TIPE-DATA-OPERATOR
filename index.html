@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luas dan Keliling Lingkaran</title>
+</head>
+<body>
+    <h2>Menghitung Luas dan Keliling Lingkaran</h2>
+    <p>Nama : Ncex's</p>
+    <form>
+        Jari-jari: <input type="number" id="jari-jari"><br>
+        <button type="button" onclick="hitungLuasDanKeliling()">Hitung</button>
+    </form>
+    <div id="luas"></div>
+    <div id="keliling"></div>
+
+    <script>
+        // Fungsi untuk menghitung luas dan keliling lingkaran
+        function hitungLuasDanKeliling() {
+            // Nilai jari-jari
+            var jariJari = parseFloat(document.getElementById('jari-jari').value);
+
+            // Menghitung luas lingkaran
+            var luasLingkaran = Math.PI * Math.pow(jariJari, 2);
+
+            // Menghitung keliling lingkaran
+            var kelilingLingkaran = 2 * Math.PI * jariJari;
+
+            // Menampilkan hasil luas di elemen dengan id "luas"
+            document.getElementById('luas').innerText = "Luas Lingkarannya : " + luasLingkaran.toFixed(2);
+
+            // Menampilkan hasil keliling di elemen dengan id "keliling"
+            document.getElementById('keliling').innerText = "Keliling Lingkarannya : " + kelilingLingkaran.toFixed(2);
+        }
+    </script>
+</body>
+</html>
